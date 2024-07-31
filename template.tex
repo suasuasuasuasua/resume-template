@@ -1,0 +1,133 @@
+\documentclass[11pt]{article}       % set main text size
+\usepackage[a4paper,                % set paper size to A4. change to letterpaper for US/Canadian resumes
+top=0.5in,                          % specify top page margin
+bottom=0.5in,                       % specify bottom page margin
+left=0.5in,                         % specify left page margin
+right=0.5in]{geometry}              % specify right page margin
+                       
+\usepackage{XCharter}               % set font
+\usepackage[T1]{fontenc}            % output encoding
+\usepackage[utf8]{inputenc}         % input encoding
+\usepackage{enumitem}               % enable lists for bullet points: itemize and \item
+\usepackage[hidelinks]{hyperref}    % format hyperlinks
+\usepackage{titlesec}               % enable section title customization
+\raggedright                        % disable text justification
+\pagestyle{empty}                   % disable page numbering
+
+% ensure PDF output will be all-Unicode and machine-readable
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+% format section headings: bolding, size, white space above and below
+\titleformat{\section}{\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule\vspace{-6.5pt}]
+
+% format bullet points: size, white space above and below, white space between bullets
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+\setlist[itemize]{itemsep=-2pt, leftmargin=12pt}
+
+% resume starts here
+\begin{document}
+
+% name
+\centerline{\Huge Lisan al-Gaib}
+
+\vspace{5pt}
+
+% contact information
+\centerline{\href{mailto:name@gmail.com}{name@gmail.com} | \href{https://mitcommlab.mit.edu/meche/commkit/portfolio/}{portfolio.com} | \href{https://old.reddit.com/r/EngineeringResumes/wiki/index\#wiki_portfolios}{github.com/name}}
+
+\vspace{-10pt}
+
+% skills section
+\section*{Skills}
+\textbf{CAD:} Siemens NX, CATIA V5, SolidWorks \\
+\textbf{Analysis:} Thermal Desktop, Abaqus, LS-DYNA, STAR-CCM+
+
+\vspace{-6.5pt}
+
+% experience section
+\section*{Experience}
+\textbf{Job Title,} \href{https://www.fstl1992.com/}{Company} -- City, ST \hfill June 2022 -- Present \\
+\vspace{-9pt}
+\begin{itemize}
+  \item \textbf{STAR:} \textbf{S}ituation \textbf{T}ask \textbf{A}ction \textbf{R}esult: \href{https://www.levels.fyi/blog/applying-star-method-resumes.html}{\underline{article 1}}, \href{https://resumegenius.com/blog/resume-help/star-method-resume}{\underline{article 2}}
+  \item \textbf{STAR:} Situation Task Action Result
+  \item \textbf{STAR:} Situation Task Action Result
+  \item \textbf{STAR:} Situation Task Action Result
+  \item \textbf{STAR:} Situation Task Action Result
+\end{itemize}
+
+\textbf{Job Title,} \href{https://www.fstl1992.com/}{Company} -- City, ST \hfill Jan 2021 -- May 2022 \\
+\vspace{-9pt}
+\begin{itemize}
+  \item \textbf{XYZ:} Accomplished \textbf{X} as measured by \textbf{Y} by doing \textbf{Z}: \href{https://www.inc.com/bill-murphy-jr/google-recruiters-say-these-5-resume-tips-including-x-y-z-formula-will-improve-your-odds-of-getting-hired-at-google.html}{\underline{article 1}}, \href{https://elevenrecruiting.com/create-an-effective-resume-xyz-resume-format/}{\underline{article 2}}
+  \item \textbf{XYZ:} Accomplished X as measured by Y by doing Z
+  \item \textbf{XYZ:} Accomplished X as measured by Y by doing Z
+  \item \textbf{XYZ:} Accomplished X as measured by Y by doing Z
+\end{itemize}
+
+\textbf{Job Title,} \href{https://www.fstl1992.com/}{Company} -- City, ST \hfill Aug 2014 -- Sept 2020 \\
+\vspace{-9pt}
+\begin{itemize}
+  \item \textbf{CAR:} \textbf{C}hallenge \textbf{A}ction \textbf{R}esult: \href{https://ca.indeed.com/career-advice/resumes-cover-letters/challenge-action-result-resume}{\underline{article 1}}, \href{https://www.topresume.com/career-advice/how-to-get-more-results-with-a-car-resume}{\underline{article 2}}
+  \item \textbf{CAR:} Challenge Action Result
+  \item \textbf{CAR:} Challenge Action Result
+  \item \textbf{CAR:} Challenge Action Result
+\end{itemize}
+
+\textbf{Job Title,} \href{https://www.fstl1992.com/}{Company} -- City, ST \hfill June 2014 -- July 2014 \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Start each bullet with a \href{https://old.reddit.com/r/EngineeringResumes/wiki/index\#wiki_action_verbs}{\underline{strong, past-tense action verb}}
+  \item Having trouble coming up with content for your bullet points? Read these: \href{https://old.reddit.com/r/EngineeringResumes/wiki/index\#wiki_having_trouble_coming_up_with_content_for_your_bullet_points.3F_ask_yourself_the_following_questions.3A}{\underline{link 1}}, \href{https://old.reddit.com/r/EngineeringResumes/wiki/index\#wiki_got_writer.27s_block_from_looking_at_star.2Fcar.2Fxyz.3F}{\underline{link 2}}, \href{https://archive.ph/Xmdqt}{\underline{link 3}}, \href{https://old.reddit.com/r/EngineeringResumes/wiki/sample-bullet-points}{\underline{link 4}}
+  \item Each bullet point should be 1--2 lines long and max 1 sentence long. Use \href{https://quillbot.com/}{\underline{Quillbot}}, \href{https://languagetool.org/paraphrasing-tool}{\underline{LanguageTool}}, and \href{https://hemingwayapp.com/}{\underline{Hemingway Editor}} to help you \href{https://www.youtube.com/watch?v=VvPaEsuz-tY}{paraphrase and shorten them}
+  \item Don't let bullets spill onto the next line with only 1--4 words on it, it's a huge waste of space \url{https://imgur.com/QCcZ792}
+\end{itemize}
+
+% \textbf{Job Title,} \href{https://www.fstl1992.com/}{Company} -- City, ST \hfill XXXX -- XXXX \\
+% \vspace{-9pt}
+
+\vspace{-18.5pt}
+
+% projects section
+\section*{Projects}
+\textbf{Project Title} \hfill \href{https://github.com/matiassingers/awesome-readme}{github.com/name/project} \\
+\vspace{-9pt}
+\begin{itemize}
+  \item The more work experience you have, the less relevant outside-work projects tend to become
+  \item If you have something that really stands out, consider listing it here
+\end{itemize}
+
+\textbf{Project Title} \hfill \href{https://mitcommlab.mit.edu/meche/commkit/portfolio/}{project.com} \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Only list real projects, not mandatory school projects or trivial tutorial projects found online 
+  \item Something that someone uses to solve a problem
+  \item Something that has users (can be just you, as long as you use it often) and is actively maintained and not just rotting in a GitHub repo, never to see a PR for the rest of its life
+\end{itemize}
+
+\textbf{Project Title} \hfill \href{https://www.hardwareishard.net/portfolio-database}{blog.com/projectname} \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Resume checklist: \url{https://old.reddit.com/r/EngineeringResumes/wiki/checklist}
+  \item Google Docs version of this template: \url{https://docs.google.com/document/d/1MBvhATv8y-ESORopRoLSZ3f3HjkM_Qa_f8fIHAEqgnI/edit}
+\end{itemize}
+
+% alternate formatting for projects section
+% \section*{Projects}
+% \begin{itemize}
+%   \item \textbf{QuantSoftware Toolkit:} Open source Python library for data analysis and machine learning for finance
+%   \item \textbf{GitHub Visualization:} Data visualization of Git Log data using D3 to analyze project trends over time
+%   \item \textbf{Recommendation System:} Music and movie recommender systems using collaborative filtering on public datasets
+%   \item \textbf{Mac Setup:} Book that gives step by step instructions on setting up developer environment on Mac OS
+% \end{itemize}
+
+\vspace{-18.5pt}
+
+% education section
+\section*{Education}
+\textbf{\href{https://www.southharmoninstituteoftechnology.org/}{School}} -- PhD in Mechanical Engineering \hfill May 2010 \\
+\textbf{\href{https://www.southharmoninstituteoftechnology.org/}{School}} -- MS in Mechanical Engineering \hfill June 2006 \\
+\textbf{\href{https://www.southharmoninstituteoftechnology.org/}{School}} -- BS in Mechanical Engineering \hfill Apr 2004
+
+\end{document}

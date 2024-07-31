@@ -1,0 +1,16 @@
+{
+	"name": "TeX Live base",
+	// Build the image locally
+	// "dockerFile": "Dockerfile",
+	// Pull the image from the github package list
+	"image": "ghcr.io/suasuasuasuasua/latex-resume:latest",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"james-yu.latex-workshop",
+				"vscodevim.vim",
+				"valentjn.vscode-ltex"
+			]
+		}
+	}
+}
