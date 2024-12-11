@@ -1,0 +1,17 @@
+{
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscodevim.vim",
+        "mkhl.direnv",
+        "christian-kohler.path-intellisense",
+        "tonybaloney.vscode-pets",
+        "james-yu.latex-workshop",
+        "myriad-dreamin.tinymist"
+      ]
+    }
+  },
+  "image": "ghcr.io/cachix/devenv:latest",
+  "overrideCommand": false,
+  "updateContentCommand": "devenv test"
+}
