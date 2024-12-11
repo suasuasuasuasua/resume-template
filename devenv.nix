@@ -11,6 +11,8 @@
 
     bat
     yazi
+
+    pandoc
   ];
 
   # https://devenv.sh/languages/
@@ -49,6 +51,7 @@
         "christian-kohler.path-intellisense"
         "tonybaloney.vscode-pets"
         "james-yu.latex-workshop"
+        "myriad-dreamin.tinymist"
       ];
     };
   };
@@ -73,6 +76,9 @@
     # LaTeX
     lacheck.enable = true;
     latexindent.enable = true;
+
+    # Typst
+    typstyle.enable = true;
   };
 
   # See full reference at https://devenv.sh/reference/options/

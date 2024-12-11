@@ -6,7 +6,8 @@
         "mkhl.direnv",
         "christian-kohler.path-intellisense",
         "tonybaloney.vscode-pets",
-        "james-yu.latex-workshop"
+        "james-yu.latex-workshop",
+        "myriad-dreamin.tinymist"
       ]
     }
   },
