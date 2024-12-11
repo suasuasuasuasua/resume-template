@@ -22,18 +22,11 @@
     packages = [
       "latexmk"
       "texcount"
-      "synctex"
-      # Random ones that we need or else nothing works..
-      "etoolbox"
-      "xetex"
       "xcharter"
-      "xkeyval"
-      "etoolbox"
       "xstring"
       "fontaxes"
       "enumitem"
       "titlesec"
-      "latexindent"
     ];
   };
 
