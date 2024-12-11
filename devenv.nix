@@ -33,6 +33,7 @@
   # Generally will use LaTeX, but I do want to learn and migrate to Typst at
   # some point!
   languages.typst.enable = true;
+  processes.typst.exec = "typst watch main.typ";
 
   devcontainer = {
     enable = true;
