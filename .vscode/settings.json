@@ -1,0 +1,40 @@
+{
+    // vscode explorer - hide files
+    "files.exclude": {
+        // default
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/*.crswap": true,
+        // devenv
+        "**/*.devenv": true,
+        "**/*.devenv.flake.nix": true,
+        "**/*.direnv": true,
+        "**/*.pre-commit-config.yaml": true,
+        // latex stuff
+        "**/*.log": true,
+        "**/*.aux": true,
+        "**/*.fdb_latexmk": true,
+        "**/*.fls": true,
+        "**/*.out": true,
+        "**/*.synctex.gz": true,
+    },
+    // vscode explorer - group files
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.patterns": {
+        "devenv.nix": "devenv.lock, devenv.yaml, .envrc, .devcontainer.json",
+        "README.md": ".gitignore"
+    },
+    // vim
+    "vim.cursorStylePerMode.normal": "block",
+    "vim.cursorStylePerMode.replace": "underline",
+    "vim.cursorStylePerMode.visual": "underline",
+    "vim.cursorStylePerMode.visualblock": "underline",
+    "vim.cursorStylePerMode.visualline": "underline",
+    "vim.highlightedyank.textColor": "'blue'",
+    "vim.joinspaces": false,
+    "vim.leader": "\\ ",
+}
