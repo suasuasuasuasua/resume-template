@@ -19,12 +19,12 @@ volume, and spin up a dev container for use.
 `texlive` is notoriously difficult to set up properly between choosing the
 distribution, the package scheme, and even finding the proper word processing
 program. If you're like most people, you'll just end up using something like
-[overleaf](https://www.overleaf.com) because it just works out of the box. Fair
-enough, I have to give them credit because the web interface is pretty, your
-files can be accessed anywhere (with an internet connection), and there is
-built-in LSP support in the web editor. However, my problem with overleaf is the
-fact that it only works online and forces you to upgrade to a premium plan for
-what I consider basic features.
+[overleaf](https://www.overleaf.com) or Microsoft Word because it just works out
+of the box. Fair enough, I have to give Overleaf credit because the web
+interface is pretty, yourfiles can be accessed anywhere (with an internet
+connection), and there isbuilt-in LSP support in the web editor. However, my
+problem with overleaf is thefact that it only works online and forces you to
+upgrade to a premium plan for what I consider basic features.
 
 In this vein, I am using [`devenv`](https://devenv.sh) to write my resumes for
 four reasons: 1) I want version control through `git` so that I can track
@@ -83,6 +83,12 @@ doesn't require antiquated and obscure commands to write _simple_ symbols, and
 the underlying engine is much faster at compiling the documents. It's pretty
 similar to `markdown` actually but is just supercharged for the writer and
 scientist.
+
+### An Aside
+
+You don't have to use this template just for the resume! The dev environment
+should work for anything from homework, reports, personal documents, etc. The
+main idea behind this repo is learning $LaTeX$ and `typst` and using `devenv`.
 
 ## Template
 
