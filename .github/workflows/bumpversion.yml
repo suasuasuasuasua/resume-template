@@ -35,14 +35,65 @@ jobs:
 
       - id: cz
         name: Create bump and changelog
-        uses: commitizen-tools/commitizen-action@master
-        with:
-          github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          changelog_increment_filename: body.md
-          git_redirect_stderr: true
-          # gpg_sign: true
-          # git_name: ${{ steps.gpg.outputs.name }}
-          # git_email: ${{ steps.gpg.outputs.email }}
+        env:
+          INPUT_GIT_NAME: ${{ steps.gpg.outputs.name }}
+          # Hack cause gnupg doesn't allow making key pair with invalid email
+          INPUT_GIT_EMAIL: ${{ steps.gpg.outputs.email }}
+          INPUT_PUSH: "true"
+        run: |
+          ## Modified from the entrypoint.sh in commitizen action github script
+          # Install python and commitizen
+          sudo apt install python3 python3-pip
+          python3 -m pip install -U pip
+          python3 -m venv venv
+          source venv/bin/activate
+          pip install commitizen
+
+          # Configure git
+          git config --global --add safe.directory "*"
+          git config --local user.name "${INPUT_GIT_NAME}"
+          git config --local user.email "${INPUT_GIT_EMAIL}"
+          git config --local pull.rebase true
+          echo "Git name: $(git config --get user.name)"
+          echo "Git email: $(git config --get user.email)"
+
+          cz --no-raise 21 bump --yes --gpg-sign --changelog --git-output-to-stderr --changelog-to-stdout >body.md
+
+          if [[ $INPUT_ACTOR ]]; then
+            ACTOR=$INPUT_ACTOR
+          else
+            ACTOR=$GITHUB_ACTOR
+          fi
+
+          REV="$(cz version --project)"
+          if [[ $REV == "$PREV_REV" ]]; then
+            INPUT_PUSH='false'
+          fi
+          echo "REVISION=${REV}" >>"$GITHUB_ENV"
+          echo "version=${REV}" >>"$GITHUB_OUTPUT"
+
+          GITHUB_DOMAIN=${GITHUB_SERVER_URL#*//}
+          CURRENT_BRANCH="$(git branch --show-current)"
+          INPUT_BRANCH="${INPUT_BRANCH:-$CURRENT_BRANCH}"
+          INPUT_REPOSITORY="${INPUT_REPOSITORY:-$GITHUB_REPOSITORY}"
+
+          echo "Repository: ${INPUT_REPOSITORY}"
+          echo "Actor: ${ACTOR}"
+
+          if [[ $INPUT_PUSH == 'true' ]]; then
+            if [[ $INPUT_MERGE != 'true' && $GITHUB_EVENT_NAME == 'pull_request' ]]; then
+              echo "Refusing to push on pull_request event since that would merge the pull request." >&2
+              echo "You probably want to run on push to your default branch instead." >&2
+            else
+              echo "Pushing to branch..."
+              REMOTE_REPO="https://${ACTOR}:${INPUT_GITHUB_TOKEN}@${GITHUB_DOMAIN}/${INPUT_REPOSITORY}.git"
+              git pull "$REMOTE_REPO" "$INPUT_BRANCH"
+              git push "$REMOTE_REPO" "HEAD:${INPUT_BRANCH}" --tags
+            fi
+          else
+            echo "Not pushing"
+          fi
+          echo "Done."
 
       - name: Release
         uses: softprops/action-gh-release@v1
