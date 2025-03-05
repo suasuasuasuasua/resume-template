@@ -22,12 +22,6 @@
         "**/*.out": true,
         "**/*.synctex.gz": true,
     },
-    // vscode explorer - group files
-    "explorer.fileNesting.enabled": true,
-    "explorer.fileNesting.patterns": {
-        "devenv.nix": "devenv.lock, devenv.yaml, .envrc, .devcontainer.json",
-        "README.md": ".gitignore"
-    },
     // vim
     "vim.cursorStylePerMode.normal": "block",
     "vim.cursorStylePerMode.replace": "underline",

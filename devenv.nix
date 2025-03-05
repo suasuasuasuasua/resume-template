@@ -5,30 +5,7 @@
     gnupg
     lazygit
     commitizen
-
-    fastfetch
-    btop
-
-    bat
-    yazi
-
-    pandoc
   ];
-
-  # https://devenv.sh/languages/
-  languages.texlive = {
-    enable = true;
-    base = pkgs.texliveSmall;
-    packages = [
-      "latexmk"
-      "texcount"
-      "xcharter"
-      "xstring"
-      "fontaxes"
-      "enumitem"
-      "titlesec"
-    ];
-  };
 
   # Generally will use LaTeX, but I do want to learn and migrate to Typst at
   # some point!
@@ -59,17 +36,10 @@
     # Git
     commitizen.enable = true;
 
-    # Docs
-    markdownlint.enable = true;
-
     # General
     check-merge-conflicts.enable = true;
     end-of-file-fixer.enable = true;
     trim-trailing-whitespace.enable = true;
-
-    # LaTeX
-    lacheck.enable = true;
-    latexindent.enable = true;
 
     # Typst
     typstyle.enable = true;
